@@ -1,4 +1,9 @@
+> This repo has been archived, as its no longer maintained by it's authors.
+
+---
+
 # 📈 react-dex-chart 📉
+
 ## A Chart Component built with `react` and `lightweight-charts` - by debased dao
 
 [![Contributors][contributors-shield]][contributors-url]
@@ -8,27 +13,29 @@
 [![MIT License][license-shield]][license-url]
 [![Sicko Mode][sick-shield]][sick-url]
 
-
 ![](https://i.imgur.com/dHnVDiM.png)
 ![](https://i.imgur.com/IAknieO.png)
 
------
+---
 
 - [x] Themes
 - [x] Settings
 - [x] Easy to use
 - [x] Responsive
 
------
+---
 
 ## Getting Started
+
 These instructions will help guide you to get and setup a copy of this library into to your own local repository and using it.
 
 ## Incomplete Parts
+
 Currenctly background gradiant is not yet implemented, and some exchanges do not work for data fetching, be it static or live.
 For some exchanges you will need your own CORS proxy server in order to load data.
 
 ## Data fetching
+
 This library is designed to use other exchanges API endpoints to fetch reliable data,
 this is done by pair splitting and listening to remote-endpoints
 
@@ -40,7 +47,6 @@ Static data fetching currently works for these exchanges
 - [ ] Coinex
 - [ ] FTX
 
-
 Live data fetching currently works for these exchanges
 
 - [x] Binance
@@ -50,16 +56,17 @@ Live data fetching currently works for these exchanges
 - [ ] FTX
 
 ## Prerequisites
-Feel free to use the package manager of your choice:
 
+Feel free to use the package manager of your choice:
 
 NPM: `npm install react react-dom react-dex-chart`
 
 Yarn: `yarn add react react-dom react-dex-chart`
 
-------
+---
 
 ## Development
+
 If you are not interested in contributing to this repo and only in setting the chart up, skip to the part ahead.
 
 ### Testing:
@@ -68,7 +75,7 @@ If you are not interested in contributing to this repo and only in setting the c
 
 `sudo npm link`
 
-Inside of your testing project: 
+Inside of your testing project:
 
 `cd example && npm install`
 
@@ -86,44 +93,41 @@ Setup the chart as usual to get started with development
 
 `npm run build`
 
-------
+---
 
 ## Setting up the chart and its settings
 
 Create your own themes
 
 You can setup your own color schemes, or only allow a singular theme:
+
 ```js
-
 const darkTheme: Theme = {
-  name: 'dark',
+  name: "dark",
   //default for now
-  candleStickConfig: {
-
-  },
-  histogramConfig: {
-
-  },
+  candleStickConfig: {},
+  histogramConfig: {},
 
   chartLayout: {
-      layout: {
-          backgroundColor: "rgba(7, 7, 28, 1)",
-          lineColor: "#2B2B43",
-          textColor: "#D9D9D9",
+    layout: {
+      backgroundColor: "rgba(7, 7, 28, 1)",
+      lineColor: "#2B2B43",
+      textColor: "#D9D9D9",
+    },
+    grid: {
+      vertLines: {
+        color: "rgba(250, 250, 250, .1)",
       },
-      grid: {
-          vertLines: {
-              color: "rgba(250, 250, 250, .1)",
-          },
-          horzLines: {
-              color: "rgba(250, 250, 250, .1)",
-          },
+      horzLines: {
+        color: "rgba(250, 250, 250, .1)",
       },
-  }
-}
+    },
+  },
+};
 ```
 
 Configure settings, and add your own:
+
 ```js
 {
     timezone: {
@@ -145,23 +149,28 @@ Configure settings, and add your own:
 }
 ```
 
-----
+---
+
 ## View example project
+
 https://github.com/debased/react-dex-chart/
 
 ## Why this library?
+
 Mainly to not have a huge clutter of files in your repo,
 while also making an extended and easier to use charting library with an as least possible setup required and many options.
 
 ## Documentation
+
 [Find documentation here](https://debased.github.io/react-dex-chart/)
 
 ## Recommended usage
-We recommend using component states for settings, and allowing them to be updated to improve UX.
 
+We recommend using component states for settings, and allowing them to be updated to improve UX.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
 [sick-shield]: https://img.shields.io/badge/sick-approved-blue
 [sick-url]: https://github.com/debased/react-dex-chart
 [contributors-shield]: https://img.shields.io/github/contributors/debased/react-dex-chart.svg?style=for-the-badge
